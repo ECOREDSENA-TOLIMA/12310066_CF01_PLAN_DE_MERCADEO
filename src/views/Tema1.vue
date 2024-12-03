@@ -166,7 +166,7 @@
               i.fas.fa-angle-right
               | Mercado en crecimiento.
       .col-lg-10
-        p Gráficamente se presenta como se evidencia a continuación:
+        p Gráficamente se evidencia a continuación:
 
     .titulo-sexto.color-acento-contenido.offset-1(data-aos="zoom-in")
       h5 Figura 3.
