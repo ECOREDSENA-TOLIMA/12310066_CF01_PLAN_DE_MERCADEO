@@ -9,246 +9,462 @@
   </template>
 
 <script>
+import Actividad from '@/components/actividad/Actividad.vue'
 export default {
   name: 'ActividadDidactica',
+  components: {
+    Actividad,
+  },
   data: () => ({
     cuestionario: {
-      tema: 'Diagnóstico en la situación de una empresa.',
+      tema: 'Fabricación del acero',
       titulo: 'Cuestionario',
       introduccion:
-        '<b> Objetivo:</b> validar el conocimiento adquirido sobre el diagnóstico empresarial.<br>Lea cada enunciado referente a los temas desarrollados en el componente formativo y elija la respuesta que considere correcta.',
+        '<b> Objetivo:</b> Identificar el proceso de fabricación del acero, incluyendo las materias primas, el funcionamiento de los diferentes hornos, los subproductos generados, y las técnicas utilizadas para la producción y reciclaje de acero.',
       barajarPreguntas: true,
       preguntas: [
         {
           id: 1,
           texto:
-            'El diagnóstico empresarial solo se enfoca en los factores internos de la organización.',
+            '¿Cuál es la principal función de la piedra caliza en el alto horno?',
           imagen: require('@/assets/actividad/imagen1.png'),
           barajarRespuestas: true,
           opciones: [
-            { id: 'a', texto: 'Verdadero', esCorrecta: false },
-            { id: 'b', texto: 'Falso', esCorrecta: true },
+            {
+              id: 'a',
+              texto: 'Capturar impurezas del hierro fundido.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'Actuar como combustible.',
+              esCorrecta: false,
+            },
+            {
+              id: 'c',
+              texto: 'Servir de fundente para reducir impurezas.',
+              esCorrecta: true,
+            },
+            {
+              id: 'd',
+              texto: 'Producir gases de alto horno.',
+              esCorrecta: false,
+            },
           ],
-          mensaje_correcto:
-            '¡Correcto! El diagnóstico empresarial abarca tanto factores internos como externos, incluyendo aspectos como el entorno competitivo, social, político, económico, y tecnológico.',
-          mensaje_incorrecto:
-            'Incorrecto. El diagnóstico empresarial evalúa factores internos y externos, proporcionando una visión completa de la situación de la empresa.',
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
         },
         {
           id: 2,
-          texto:
-            'La matriz FODA ayuda a identificar fortalezas, oportunidades, debilidades y amenazas de una empresa.',
-          imagen: require('@/assets/actividad/imagen2.png'),
+          texto: 'El arrabio es:',
+          imagen: require('@/assets/actividad/imagen1.png'),
           barajarRespuestas: true,
           opciones: [
-            { id: 'a', texto: 'Verdadero', esCorrecta: true },
-            { id: 'b', texto: 'Falso', esCorrecta: false },
+            {
+              id: 'a',
+              texto: 'Un subproducto del horno eléctrico.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'Un producto líquido de la primera fusión del hierro.',
+              esCorrecta: true,
+            },
+            {
+              id: 'c',
+              texto: 'Un tipo de caliza.',
+              esCorrecta: false,
+            },
+            {
+              id: 'd',
+              texto: 'Un tipo de acero especial.',
+              esCorrecta: false,
+            },
           ],
-          mensaje_correcto:
-            '¡Bien hecho! La matriz FODA es una herramienta esencial para evaluar la posición de la empresa y formular estrategias efectivas.',
-          mensaje_incorrecto:
-            'No es correcto. La matriz FODA es una herramienta clave para identificar y analizar las fortalezas, oportunidades, debilidades, y amenazas de la empresa.',
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
         },
         {
           id: 3,
           texto:
-            'El análisis interno se enfoca en estudiar los competidores y las tendencias del sector.',
-          imagen: require('@/assets/actividad/imagen3.png'),
+            '¿Cuál de las siguientes opciones describe mejor el proceso de colada continua?',
+          imagen: require('@/assets/actividad/imagen1.png'),
           barajarRespuestas: true,
           opciones: [
-            { id: 'a', texto: 'Verdadero', esCorrecta: false },
-            { id: 'b', texto: 'Falso', esCorrecta: true },
+            {
+              id: 'a',
+              texto: 'Un proceso de reciclaje de chatarra.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'La extracción del mineral de hierro.',
+              esCorrecta: false,
+            },
+            {
+              id: 'c',
+              texto:
+                'El proceso de solidificación del acero líquido para formar semiproductos.',
+              esCorrecta: true,
+            },
+            {
+              id: 'd',
+              texto: 'La fusión de metales a alta temperatura.',
+              esCorrecta: false,
+            },
           ],
-          mensaje_correcto:
-            '¡Exacto! El análisis interno evalúa los recursos y capacidades de la empresa, mientras que el análisis externo se encarga de estudiar el mercado, los competidores y las tendencias del sector.',
-          mensaje_incorrecto:
-            'No es correcto. El análisis interno se enfoca en los recursos y capacidades de la empresa. El análisis de competidores y tendencias se realiza en el análisis externo.',
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
         },
         {
           id: 4,
           texto:
-            'Un diagnóstico empresarial incluye la evaluación de áreas como finanzas, recursos humanos, ventas y <em>marketing</em>.',
-          imagen: require('@/assets/actividad/imagen4.png'),
-          barajarRespuestas: true,
-          opciones: [
-            { id: 'a', texto: 'Verdadero', esCorrecta: true },
-            { id: 'b', texto: 'Falso', esCorrecta: false },
-          ],
-          mensaje_correcto:
-            '¡Correcto! Un diagnóstico empresarial integral abarca diferentes áreas funcionales de la empresa, lo que permite una comprensión completa de su situación.',
-          mensaje_incorrecto:
-            'Incorrecto. El diagnóstico empresarial analiza áreas clave de la empresa, como finanzas, recursos humanos, ventas y marketing.',
-        },
-        {
-          id: 5,
-          texto:
-            'El análisis PESTEL examina únicamente los factores tecnológicos que afectan a la empresa.',
-          imagen: require('@/assets/actividad/imagen1.png'),
-          barajarRespuestas: true,
-          opciones: [
-            { id: 'a', texto: 'Verdadero', esCorrecta: false },
-            { id: 'b', texto: 'Falso', esCorrecta: true },
-          ],
-          mensaje_correcto:
-            '¡Bien hecho! El análisis PESTEL incluye factores políticos, económicos, sociales, tecnológicos, ecológicos y legales que pueden afectar a la empresa.',
-          mensaje_incorrecto:
-            'No es correcto. El análisis PESTEL examina diversos factores, no solo tecnológicos, sino también políticos, económicos, sociales, ecológicos y legales.',
-        },
-        {
-          id: 6,
-          texto:
-            'La identificación de oportunidades de crecimiento es uno de los beneficios del diagnóstico empresarial.',
+            '¿Cuál de estos elementos no es una materia prima del alto horno?',
           imagen: require('@/assets/actividad/imagen2.png'),
           barajarRespuestas: true,
           opciones: [
-            { id: 'a', texto: 'Verdadero', esCorrecta: true },
-            { id: 'b', texto: 'Falso', esCorrecta: false },
+            {
+              id: 'a',
+              texto: 'Coque.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'Cobre.',
+              esCorrecta: true,
+            },
+            {
+              id: 'c',
+              texto: 'Mineral de hierro.',
+              esCorrecta: false,
+            },
+            {
+              id: 'd',
+              texto: 'Caliza.',
+              esCorrecta: false,
+            },
           ],
-          mensaje_correcto:
-            '¡Exacto! Un diagnóstico preciso permite identificar oportunidades en el mercado, facilitando la formulación de estrategias para el crecimiento de la empresa.',
-          mensaje_incorrecto:
-            'Incorrecto. El diagnóstico empresarial es fundamental para identificar oportunidades de crecimiento y mejorar la competitividad de la empresa.',
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 5,
+          texto: 'El horno convertidor se utiliza para:',
+          imagen: require('@/assets/actividad/imagen2.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Controlar el porcentaje de carbono en el acero.',
+              esCorrecta: true,
+            },
+            {
+              id: 'b',
+              texto: 'Fundir la caliza.',
+              esCorrecta: false,
+            },
+            {
+              id: 'c',
+              texto: 'Extraer mineral de hierro de las minas.',
+              esCorrecta: false,
+            },
+            {
+              id: 'd',
+              texto: 'Realizar el proceso de laminación.',
+              esCorrecta: false,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 6,
+          texto: '¿Cuál de estos elementos es un subproducto del alto horno?',
+          imagen: require('@/assets/actividad/imagen2.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Gases del alto horno.',
+              esCorrecta: true,
+            },
+            {
+              id: 'b',
+              texto: 'Barras de acero.',
+              esCorrecta: false,
+            },
+            {
+              id: 'c',
+              texto: 'Perfiles estructurales.',
+              esCorrecta: false,
+            },
+            {
+              id: 'd',
+              texto: 'Alambres para trefilería.',
+              esCorrecta: false,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
         },
         {
           id: 7,
           texto:
-            '¿Cuál es el objetivo principal del diagnóstico de la situación de la empresa en el plan de mercadeo?',
+            'La función principal del horno eléctrico en la siderurgia moderna es:',
           imagen: require('@/assets/actividad/imagen3.png'),
           barajarRespuestas: true,
           opciones: [
             {
               id: 'a',
-              texto: 'Revisar la calidad de las relaciones con clientes.',
-              esCorrecta: false,
-            },
-            {
-              id: 'b',
-              texto:
-                'Analizar factores internos y externos para decisiones estratégicas.',
+              texto: 'Fabricar acero a partir de chatarra reciclada.',
               esCorrecta: true,
             },
             {
+              id: 'b',
+              texto: 'Producir caliza.',
+              esCorrecta: false,
+            },
+            {
               id: 'c',
-              texto:
-                'Mejorar el ambiente laboral y las condiciones de trabajo.',
+              texto: 'Extraer mineral de hierro.',
               esCorrecta: false,
             },
             {
               id: 'd',
-              texto: 'Evaluar los resultados contables de la empresa.',
+              texto: 'Crear fundentes para el proceso.',
               esCorrecta: false,
             },
           ],
-          mensaje_correcto:
-            '¡Correcto! El diagnóstico permite analizar factores clave que afectan la competitividad.',
-          mensaje_incorrecto:
-            'Incorrecto. El diagnóstico se enfoca en factores internos y externos para decisiones estratégicas.',
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
         },
         {
           id: 8,
           texto:
-            '¿Qué aspecto se evalúa en el análisis interno de una empresa?',
+            '¿Cuál de las siguientes afirmaciones es correcta sobre la escoria?',
+          imagen: require('@/assets/actividad/imagen3.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Es el producto principal del horno convertidor.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'Se utiliza para la fabricación de cemento y abonos.',
+              esCorrecta: true,
+            },
+            {
+              id: 'c',
+              texto: 'Es un subproducto de la laminación.',
+              esCorrecta: false,
+            },
+            {
+              id: 'd',
+              texto: 'Se utiliza para fabricar acero inoxidable.',
+              esCorrecta: false,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 9,
+          texto: 'El acero es infinitamente reciclable.',
+          imagen: require('@/assets/actividad/imagen3.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Verdadero.',
+              esCorrecta: true,
+            },
+            {
+              id: 'b',
+              texto: 'Falso.',
+              esCorrecta: false,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 10,
+          texto: 'El gas de alto horno contiene un 60% de oxígeno.',
+          imagen: require('@/assets/actividad/imagen3.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Verdadero.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'Falso.',
+              esCorrecta: true,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 11,
+          texto:
+            '¿Cuál es el objetivo principal del proceso de laminación en caliente?',
           imagen: require('@/assets/actividad/imagen4.png'),
           barajarRespuestas: true,
           opciones: [
             {
               id: 'a',
-              texto:
-                'Relaciones con el sector público y los entes reguladores.',
+              texto: 'Producir gases del alto horno.',
               esCorrecta: false,
             },
             {
               id: 'b',
-              texto: 'Preferencias y tendencias en el mercado.',
+              texto: 'Fundir mineral de hierro.',
               esCorrecta: false,
             },
             {
               id: 'c',
-              texto: 'Recursos y capacidades organizacionales.',
+              texto: 'Transformar palanquillas en productos de acero largo.',
               esCorrecta: true,
             },
             {
               id: 'd',
-              texto: 'Condiciones económicas del mercado global.',
+              texto: 'Extraer impurezas del acero.',
               esCorrecta: false,
             },
           ],
-          mensaje_correcto:
-            '¡Bien hecho! El análisis interno se enfoca en los recursos y capacidades de la empresa.',
-          mensaje_incorrecto:
-            'Lo siento, el análisis interno se centra en los recursos y capacidades de la organización.',
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
         },
         {
-          id: 9,
-          texto: '¿Qué significa FODA en el análisis empresarial?',
-          imagen: require('@/assets/actividad/imagen1.png'),
-          barajarRespuestas: true,
-          opciones: [
-            {
-              id: 'a',
-              texto: 'Fortalezas, Oportunidades, Debilidades, Amenazas.',
-              esCorrecta: true,
-            },
-            {
-              id: 'b',
-              texto: 'Fuerza, Oportunidad, Diversidad, Alternativas.',
-              esCorrecta: false,
-            },
-            {
-              id: 'c',
-              texto:
-                'Financiamiento, Operaciones, Distribución, Administración.',
-              esCorrecta: false,
-            },
-            {
-              id: 'd',
-              texto: 'Factores, Opciones, Desventajas, Aspectos.',
-              esCorrecta: false,
-            },
-          ],
-          mensaje_correcto:
-            'Correcto, FODA significa Fortalezas, Oportunidades, Debilidades y Amenazas.',
-          mensaje_incorrecto:
-            'Incorrecto, FODA se refiere a Fortalezas, Oportunidades, Debilidades y Amenazas.',
-        },
-        {
-          id: 10,
+          id: 12,
           texto:
-            '¿Qué herramienta evalúa factores políticos, económicos, sociales, tecnológicos, ecológicos y legales?',
-          imagen: require('@/assets/actividad/imagen2.png'),
+            '¿Qué elemento se utiliza como fuente de carbono en el alto horno?',
+          imagen: require('@/assets/actividad/imagen4.png'),
           barajarRespuestas: true,
           opciones: [
             {
               id: 'a',
-              texto: 'Análisis PESTEL',
-              esCorrecta: true,
-            },
-            {
-              id: 'b',
-              texto: 'Análisis FODA',
+              texto: 'Caliza.',
               esCorrecta: false,
             },
             {
+              id: 'b',
+              texto: 'Coque.',
+              esCorrecta: true,
+            },
+            {
               id: 'c',
-              texto: '<em>Benchmarking</em> empresarial',
+              texto: 'Escoria.',
               esCorrecta: false,
             },
             {
               id: 'd',
-              texto: 'Evaluación general del sector',
+              texto: 'Mineral de hierro.',
               esCorrecta: false,
             },
           ],
-          mensaje_correcto:
-            '¡Correcto! PESTEL evalúa estos factores del entorno macroeconómico.',
-          mensaje_incorrecto:
-            'Incorrecto, la herramienta que evalúa estos factores es el análisis PESTEL.',
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 13,
+          texto: 'El horno cuchara se utiliza principalmente para:',
+          imagen: require('@/assets/actividad/imagen4.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Producir acero inoxidable.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'Fundir la caliza.',
+              esCorrecta: false,
+            },
+            {
+              id: 'c',
+              texto: 'Homogeneizar la carga y eliminar la escoria.',
+              esCorrecta: true,
+            },
+            {
+              id: 'd',
+              texto: 'Extraer el arrabio del alto horno.',
+              esCorrecta: false,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 14,
+          texto: 'La magnetita y la hematita son ejemplos de:',
+          imagen: require('@/assets/actividad/imagen4.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Hidróxidos de hierro.',
+              esCorrecta: false,
+            },
+            {
+              id: 'b',
+              texto: 'Óxidos de hierro.',
+              esCorrecta: true,
+            },
+            {
+              id: 'c',
+              texto: 'Sulfuros de hierro.',
+              esCorrecta: false,
+            },
+            {
+              id: 'd',
+              texto: 'Carbonatos de hierro.',
+              esCorrecta: false,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
+        },
+        {
+          id: 15,
+          texto: '¿Cuál de los siguientes no es un subproducto del alto horno?',
+          imagen: require('@/assets/actividad/imagen4.png'),
+          barajarRespuestas: true,
+          opciones: [
+            {
+              id: 'a',
+              texto: 'Placas de acero.',
+              esCorrecta: true,
+            },
+            {
+              id: 'b',
+              texto: 'Gases del alto horno.',
+              esCorrecta: false,
+            },
+            {
+              id: 'c',
+              texto: 'Escoria.',
+              esCorrecta: false,
+            },
+            {
+              id: 'd',
+              texto: 'Arrabio.',
+              esCorrecta: false,
+            },
+          ],
+          mensaje_correcto: '¡Muy bien! Ha acertado la respuesta.',
+          mensaje_incorrecto: 'Lo sentimos, su respuesta no es la correcta.',
         },
       ],
-      mensaje_final_aprobado:
-        '¡Excelente! Lo felicito, ha superado la actividad y demuestra sólidos conocimientos sobre el componente formativo.',
+      mensaje_final_aprobado: '¡Excelente! Ha superado la actividad.',
       mensaje_final_reprobado:
-        'No ha superado la actividad. Le recomendamos volver a revisar el componente formativo e intentar nuevamente la actividad didáctica.',
+        'Le recomendamos volver a revisar el componente formativo e intentar nuevamente la actividad didáctica.',
     },
   }),
 }
