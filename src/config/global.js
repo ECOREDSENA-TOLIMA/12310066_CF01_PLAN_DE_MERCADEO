@@ -235,12 +235,12 @@ export default {
   referencias: [
     {
       referencia:
-        'Baena, V. (2011). Fundamentos de #[i marketing]: entorno, consumidor, estrategia e investigación comercial. España: Editorial UOC.',
+        'Baena, V. (2011). Fundamentos de <em>marketing</em>: entorno, consumidor, estrategia e investigación comercial. España: Editorial UOC.',
       link: '',
     },
     {
       referencia:
-        'Kloter, P. (2008). Las preguntas más frecuentes sobre el #[i marketing]. Bogotá, Colombia: Editorial Norma.',
+        'Kloter, P. (2008). Las preguntas más frecuentes sobre el <em>marketing</em>. Bogotá, Colombia: Editorial Norma.',
       link: '',
     },
     {
@@ -250,32 +250,32 @@ export default {
     },
     {
       referencia:
-        'Limas, S. (2012). #[i Marketing] empresarial: dirección como estrategia competitiva. Bogotá, Colombia: Ediciones de la U.',
+        'Limas, S. (2012). <em>Marketing</em> empresarial: dirección como estrategia competitiva. Bogotá, Colombia: Ediciones de la U.',
       link: '',
     },
     {
       referencia:
-        'Mesa, M. (2012). Fundamentos de #[i marketing]. Colombia: Ecoe Ediciones.',
+        'Mesa, M. (2012). Fundamentos de <em>marketing</em>. Colombia: Ecoe Ediciones.',
       link: '',
     },
     {
       referencia:
-        'Sainz de Vicuña, J. (2004). La importancia del plan de #[i marketing] como herramienta de gestión. España: Ediciones Deusto - Planeta de Agostini Profesional y Formación S.L.',
+        'Sainz de Vicuña, J. (2004). La importancia del plan de <em>marketing</em> como herramienta de gestión. España: Ediciones Deusto - Planeta de Agostini Profesional y Formación S.L.',
       link: '',
     },
     {
       referencia:
-        'Schnarch, A., & Schnarch, G. (2010). #[i Marketing] para emprendedores. Colombia: Ecoe Ediciones.',
+        'Schnarch, A., & Schnarch, G. (2010). <em>Marketing</em> para emprendedores. Colombia: Ecoe Ediciones.',
       link: '',
     },
     {
       referencia:
-        'Schnarch, K. (2013). #[i Marketing] para Pymes: un enfoque para Latinoamérica. México: Alfaomega.',
+        'Schnarch, K. (2013). <em>Marketing</em> para Pymes: un enfoque para Latinoamérica. México: Alfaomega.',
       link: '',
     },
     {
       referencia:
-        'Solomon, M., & Stuart, E. (2001). #[i Marketing]. Personas reales, decisiones reales (2ª ed.). Bogotá, Colombia: Pearson Educación de Colombia Ltda.',
+        'Solomon, M., & Stuart, E. (2001). <em>Marketing</em>. Personas reales, decisiones reales (2ª ed.). Bogotá, Colombia: Pearson Educación de Colombia Ltda.',
       link: '',
     },
   ],
